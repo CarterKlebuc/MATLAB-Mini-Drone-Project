@@ -1,0 +1,8 @@
+%% Testing Image for Circle
+
+% Image file was loaded manually into MATLAB instead of imread()
+my_image = TestParrotDownwardCircleImage;
+new_image = imgaussfilt(my_image, 2);
+imshow(new_image)
+[centers, radii, metric] = imfindcircles(new_image, [10, 100]);
+viscircles(centers, radii, 'EdgeColor', 'b');

@@ -1,0 +1,14 @@
+% Landingpad Centering Algorithm
+clc, clear, close all
+
+test_image = imread("TestParrotDownwardCircleImage.png");
+blurred_image = imgaussfilt(test_image, 2);
+[centers, radii] = imfindcircles(blurred_image, [15 25])
+imshow(blurred_image)
+
+screen_middle = int32([(160 / 2), (120 / 2)]);
+
+hold on
+viscircles(centers, radii, 'EdgeColor', 'b');
+converted_vector = int32(centers)
+plot(converted_vector(1), converted_vector(2), 'g+', 'MarkerSize', 30, 'LineWidth', 2);
