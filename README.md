@@ -18,7 +18,10 @@ This is the Stateflow chart which is used to either guide the drone along the re
 
 ![Screenshot 2025-01-19 121013](https://github.com/user-attachments/assets/223d6b4c-89f6-40db-b4dd-8a678bd22094)
 
-
+This portion is used to guide the drone along the red line by using a MATLAB function to translate the inputted targeted direction for the drone into virtual motor commands.
 
 ![Screenshot 2025-01-19 121024](https://github.com/user-attachments/assets/f009d3d4-bd8f-4aca-b6ff-d496a0f2068b)
+
+This portion is used to center the drone on the landing pad before landing on it by calculating the error between the detected center coordinates of the landing pad with the center of the drone's camera. Once the error between the center of the camera and the center of the landing pad is less than 2, the drone will then land on the landing pad.
+
 ![Screenshot 2025-01-19 121043](https://github.com/user-attachments/assets/9e451cfe-dc04-4699-938f-8e590a98e068)
